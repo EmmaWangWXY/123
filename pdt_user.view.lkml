@@ -6,6 +6,18 @@ view: pdt_user {
 FROM demo_db.users  AS users  ;;
   }
 
+  dimension: user_id {
+    primary_key: yes
+    type: number
+    sql: ${TABLE}.users.id ;;
+  }
+
+  dimension: user_gender {
+#     primary_key: yes
+    type: number
+    sql: ${TABLE}.users.gender ;;
+  }
+
 
   # # You can specify the table name if it's different from the view name:
   # sql_table_name: my_schema_name.tester ;;
