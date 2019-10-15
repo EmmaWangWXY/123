@@ -16,4 +16,7 @@ include: "*.view.lkml"                       # include all views in this project
 #     relationship: many_to_one
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
+explore: orders {
+  label: "model_test_explore"
+}
 # }
