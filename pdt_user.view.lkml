@@ -1,21 +1,21 @@
 view: pdt_user {
   derived_table:{
     sql:SELECT
-  users.id  AS `users.id`,
-  users.gender  AS `users.gender`
+  users.id  AS `userid`,
+  users.gender  AS `gender`
 FROM demo_db.users  AS users  ;;
   }
 
   dimension: user_id {
     primary_key: yes
     type: number
-    sql: ${TABLE}.users.id ;;
+    sql: ${TABLE}.userid ;;
   }
 
   dimension: user_gender {
 #     primary_key: yes
     type: number
-    sql: ${TABLE}.users.gender ;;
+    sql: ${TABLE}.usersgender ;;
   }
 
 
